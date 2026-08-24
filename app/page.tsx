@@ -2,10 +2,17 @@ import { Suspense } from "react";
 import { ShieldCheck, Sparkles, TimerReset } from "lucide-react";
 import { IntakeForm } from "@/components/intake-form";
 import { Badge } from "@/components/ui/badge";
+import { Logo } from "@/components/logo";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-black">
+      <header className="border-b border-zinc-900">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+          <Logo />
+        </div>
+      </header>
+
       <section className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center gap-16 px-6 py-20 lg:flex-row lg:items-start lg:py-28">
         <div className="flex max-w-xl flex-col gap-6">
           <Badge className="w-fit">AI-assisted account recovery</Badge>

@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { signIn } from "@/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 export default async function LoginPage({
   searchParams,
@@ -27,7 +28,8 @@ export default async function LoginPage({
   }
 
   return (
-    <div className="flex flex-1 items-center justify-center px-4 py-24">
+    <div className="flex flex-1 flex-col items-center justify-center gap-8 px-4 py-24">
+      <Logo />
       <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>Admin sign in</CardTitle>

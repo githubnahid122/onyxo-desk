@@ -2,6 +2,7 @@ import { auth, signOut } from "@/auth";
 import { listLeads } from "@/lib/leads";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 function statusVariant(status: string) {
   if (status === "paid") return "default" as const;
@@ -20,6 +21,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-6 py-10">
+      <Logo />
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold text-zinc-50">Leads</h1>
